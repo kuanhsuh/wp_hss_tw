@@ -19,9 +19,9 @@ get_header(); ?>
       </div>
       <div class="col-md-5">
         <div class="contact--card">
-          <h2 class="page-heading mb-30">Contact Us</h2>
+          <h2 class="page-heading mb-30">聯絡我們</h2>
           <ul class="contact--list">
-            <li><?php echo $address; ?></li>
+            <li>高雄市鼓山區哨船街75-17號</li>
             <li>T <?php echo $phone; ?></li>
             <li>F <?php echo $fax; ?></li>
             <li>E <?php echo $email; ?></li>

@@ -18,9 +18,9 @@
 
       <!-- col-md-6 -->
       <div class="col-md-6 pl-30">
-        <h3 class="mb-20">Taiwan Office</h3>
+        <h3 class="mb-20">台灣辦公室</h3>
         <ul class="footer--sitemapNav">
-          <li>No. 75-17, Shao-Chuan St., Kusan Dist., Kaohsiung, Taiwan</li>
+          <li>高雄市鼓山區哨船街75-17號</li>
           <li>T +886-7-533-2141</li>
           <li>F +886-7-532-1297</li>
           <li>E sales@hss.com.tw, export@hss.com.tw</li>

@@ -62,19 +62,19 @@
         </div>
         <ul class="navbar--nav">
           <li>
-            <a href="<?php echo esc_html(site_url("/")); ?>">Home</a>
+            <a href="<?php echo esc_html(site_url("/")); ?>">首頁</a>
           </li>
           <li>
-            <a href="<?php echo esc_html(site_url("/about")); ?>">About</a>
+            <a href="<?php echo esc_html(site_url("/about")); ?>">關於</a>
           </li>
           <li>
-            <a href="<?php echo esc_html(site_url("/products")); ?>">Products</a>
+            <a href="<?php echo esc_html(site_url("/products")); ?>">產品</a>
           </li>
           <li>
-            <a href="<?php echo esc_html(site_url("/download")); ?>">Downloads</a>
+            <a href="<?php echo esc_html(site_url("/download")); ?>">下載</a>
           </li>
           <li>
-            <a href="<?php echo esc_html(site_url("/contact")); ?>">Contact</a>
+            <a href="<?php echo esc_html(site_url("/contact")); ?>">聯絡</a>
           </li>
           <li class="search">
             <span class="search--group">
