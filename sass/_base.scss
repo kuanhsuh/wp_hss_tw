@@ -1,0 +1,244 @@
+// Variables, Mixins, Reset, Utility, Typography
+
+// Variables
+$blue: #2c3e50;
+$blue-lt: hsla(210, 97%, 47%, 1);
+$blue-dk: #202d3b;
+$grey-0: #f0efef;
+$grey-1: #cccccc;
+$grey-2: #6a6c6e;
+$black: #1a252f;
+$white: #fff;
+
+// Reset
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px; // 1rem = 10px, 10px/16px = 62.5%
+  color: $black;
+
+  @media only screen and (max-width: 720px) {
+    font-size: 14px;
+  }
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+a,
+a:hover {
+  color: currentColor;
+  text-decoration: none;
+}
+
+// Typography
+h1,
+h2,
+h3 {
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 2rem; //32px
+  position: relative;
+}
+
+h3 {
+  font-size: 1.1875rem; //19px
+  font-weight: 400;
+}
+
+.page-heading {
+  font-size: 2rem; //32px
+  position: relative;
+  font-weight: 700;
+  display: inline-block;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    width: 35px;
+    height: 5px;
+    background-color: $blue-lt;
+  }
+}
+
+// Utility
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.mt-60 {
+  margin-top: 60px;
+}
+
+.mt-90 {
+  margin-top: 90px;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mb-60 {
+  margin-bottom: 60px;
+}
+
+.mb-90 {
+  margin-bottom: 90px;
+}
+
+.pt-10 {
+  padding-top: 10px;
+}
+
+.pt-20 {
+  padding-top: 20px;
+}
+
+.pt-30 {
+  padding-top: 30px;
+}
+
+.pt-60 {
+  padding-top: 60px;
+}
+
+.pt-90 {
+  padding-top: 90px;
+}
+
+.pb-10 {
+  padding-bottom: 10px;
+}
+
+.pb-20 {
+  padding-bottom: 20px;
+}
+
+.pb-30 {
+  padding-bottom: 30px;
+}
+
+.pb-60 {
+  padding-bottom: 60px;
+}
+
+.pb-90 {
+  padding-bottom: 90px;
+}
+
+.pl-10 {
+  padding-left: 10px;
+}
+
+.pl-20 {
+  padding-left: 20px;
+}
+
+.pl-30 {
+  padding-left: 30px;
+}
+
+.pr-10 {
+  padding-right: 10px;
+}
+
+.pr-20 {
+  padding-right: 20px;
+}
+
+.pr-30 {
+  padding-right: 30px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+// Mixins
+@mixin respond($breakpoint) {
+  @if $breakpoint==sm {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==md {
+    @media only screen and (min-width: 768px) and (max-width: 960px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==lg {
+    @media screen and (min-width: 990px) and (max-width: 1200px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==xlg {
+    @media only screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+}

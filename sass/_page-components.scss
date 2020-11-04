@@ -1,0 +1,272 @@
+// Page/Index - Section - Quality
+
+.qualities {
+  &--heading {
+    font-weight: 700;
+    font-size: 2.5rem;
+  }
+
+  &--about-txt {
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  &--container {
+    flex-wrap: wrap;
+
+    & .col-md-6:nth-of-type(3),
+    & .col-md-6:nth-of-type(4) {
+      margin-top: 30px;
+
+      @include respond(sm) {
+        margin-top: 0px;
+      }
+    }
+
+    @include respond(sm) {
+      margin-top: 30px;
+    }
+  }
+
+  &--card {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+
+    @include respond(sm) {
+      margin-top: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid $grey-1;
+    }
+  }
+
+  &--card-heading {
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+  }
+
+  &--card-txt {
+    font-weight: 300;
+    line-height: 1.5;
+    hyphens: auto;
+  }
+}
+
+// Page/Index - Section - Testimonials
+
+.testimonials {
+  background: $blue;
+  color: $white;
+
+  &--heading {
+    font-weight: 700;
+    font-size: 2.5rem;
+  }
+
+  &--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &--text {
+    font-weight: 300;
+    line-height: 1.8;
+  }
+
+  &--client {
+    display: flex;
+    align-items: flex-start;
+
+    &--title {
+      font-size: 1.2rem;
+    }
+
+    &--position {
+      font-size: 0.9rem;
+      color: #83aed6;
+    }
+  }
+}
+
+// Page/Index - Section - Clients
+
+.clients {
+  background: $grey-0;
+}
+
+// PAGE/ABOUT - Section - ABOUT
+
+.about {
+  background: $grey-0;
+
+  @include respond(md) {
+    background: $white;
+  }
+
+  &--container {
+    margin-top: -120px;
+    background: $white;
+
+    @include respond(md) {
+      margin-top: 0px;
+    }
+  }
+
+  &--text {
+    line-height: 1.75;
+  }
+}
+
+// PAGE/DOWNLOADS - Section - DOWNLOADS
+
+.downloads {
+  background: $grey-0;
+
+  @include respond(md) {
+    background: $white;
+  }
+
+  &--container {
+    border-top: 3px solid $blue-lt;
+    background: $white;
+    border-radius: 10px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include respond(md) {
+      padding-top: 0px;
+      padding-bottom: 0px;
+      background: $white;
+      border-radius: 0px;
+      border-top: none;
+    }
+  }
+}
+
+// PAGE/CONTACT - Section - CONTACT
+
+.contact {
+  background: $grey-0;
+
+  &--card {
+    background: $white;
+    padding: 40px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.12);
+  }
+
+  &--list {
+    list-style: none;
+
+    & li {
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+// Page/Products - SECTION Product Nav
+
+.productNav {
+  &--container {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.12);
+    padding: 20px;
+    line-height: 1.6;
+    text-align: center;
+    font-size: 1.1rem;
+    color: $blue;
+  }
+
+  & .separator {
+    color: $grey-1;
+  }
+}
+
+.sidebar {
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.25);
+  padding: 30px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  overflow: hidden;
+
+  @include respond(sm) {
+    order: 5;
+    margin-top: 1rem;
+  }
+
+  & h3 {
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: 1.2px;
+    background: $blue-dk;
+    color: #fff;
+    margin: -30px -30px 2rem;
+    padding: 1rem;
+  }
+
+  &--list {
+    list-style: none;
+  }
+
+  &--list li {
+    margin-bottom: 1rem;
+    border-bottom: 1px dotted $blue-dk;
+    padding: 0.5rem;
+  }
+}
+
+// Page/Single - SECTION Product
+
+.product {
+  background: #fbfcfd;
+
+  & .container {
+    background: #fff;
+    padding: 30px;
+  }
+
+  &--img {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+
+  &--heading {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    @include respond(md) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &--model {
+    font-size: 0.875rem;
+    color: $grey-2;
+  }
+
+  &--description {
+    padding: 0 4rem;
+    font-weight: 300;
+
+    @include respond(md) {
+      padding: 0 2rem;
+    }
+
+    @include respond(sm) {
+      padding: 0 1rem;
+    }
+  }
+
+  &--btn-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &--certificate {
+    display: flex;
+    align-items: center;
+  }
+}

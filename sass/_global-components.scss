@@ -1,0 +1,255 @@
+// Global Components Nav, Page-Header, Footer, Table
+
+// Nav Bar
+.navbar {
+  background: #33445d;
+  color: #fff;
+  width: 100%;
+  font-weight: 700;
+
+  &--logo {
+    width: 100px;
+    height: auto;
+  }
+
+  &--container {
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &--nav {
+    list-style: none;
+
+    & li {
+      display: inline-block;
+      margin-right: 15px;
+
+      &:last-of-type {
+        margin-right: 0px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+      z-index: 999;
+      font-size: 1.4rem;
+    }
+  }
+
+  &--left {
+    display: flex;
+    align-items: center;
+  }
+
+  &--lang {
+    line-height: 30px;
+    margin-left: 16px;
+    margin-top: 20px;
+  }
+
+  &--burger {
+    display: none;
+
+    @media (max-width: 768px) {
+      display: block;
+      width: 27px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    & .bar {
+      display: block;
+      margin: 6px auto;
+      height: 3px;
+      background: $blue;
+    }
+  }
+
+  &--show-menu {
+    position: relative;
+
+    & .navbar--nav {
+      display: block;
+      position: absolute;
+      top: 55px;
+      background: #fff;
+      width: 100%;
+      box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.25);
+
+      & li {
+        display: flex;
+        height: 40px;
+        margin-right: 0;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+.search {
+  position: relative;
+
+  &--group {
+    display: flex;
+  }
+
+  &--input {
+    display: block;
+    padding: .375rem .75rem;
+    border: 1px solid $grey-1;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    background-color: $white;
+  }
+
+  &--dropdown {
+    position: absolute;
+    // display: flex;
+    display: none;
+    justify-content: space-between;
+    border-radius: 6px;
+    border: 1px solid $grey-1;
+    background: $white;
+    padding: 20px;
+    z-index: 3;
+    width: 500px;
+    top: 40px;
+    right: 30px;
+  }
+
+  &--dropdown-menu {}
+
+  &--dropdown-menu li {
+    display: flex;
+    align-items: center;
+    padding: .75rem;
+    border-bottom: 1px solid $grey-0;
+    margin-right: 0px;
+  }
+
+  &--img {
+    width: 40px;
+    height: 40px;
+    margin-right: .5rem;
+  }
+}
+
+
+
+// Table
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  border-collapse: collapse;
+
+  & td,
+  & th {
+    padding: 0.75rem;
+    vertical-align: top;
+    border: 1px solid #dee2e6;
+    text-align: center;
+  }
+}
+
+// FOOTER
+
+.footer {
+  background: $blue;
+  color: $white;
+
+  &--sitemapNav {
+    list-style: none;
+
+    & li {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.copyright {
+  background: $blue-dk;
+  color: lighten($blue-dk, 60%);
+}
+
+// Section Page Header
+
+.page-header {
+  height: 350px;
+}
+
+.about-header {
+  background: url("https://via.placeholder.com/1200x500") no-repeat center/cover;
+}
+
+.downloads-header {
+  background: url("https://via.placeholder.com/1200x500") no-repeat center/cover;
+}
+
+// Form Control
+.form-group {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  & label {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+// Button
+.btn {
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 3px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.btn-outline {
+  color: $blue;
+  border: 1px solid $blue;
+  background-color: #fff;
+}
+
+.btn-full {
+  background-color: $blue;
+  color: #fff;
+  transition: all 0.5s;
+
+  &:hover,
+  &:active {
+    background-color: lighten($blue, 5%);
+    color: #fff;
+  }
+}
+
+
+
+// Sprite icons
+
+.icon {
+  height: 60px;
+  width: 60px;
+}

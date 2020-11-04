@@ -58,7 +58,9 @@
         <!-- Keep within 1140px width -->
         <div class="navbar--left">
           <a href="<?php echo esc_html(site_url()) ?>"><img src="<?php echo get_theme_file_uri('/img/hss-logo-light.jpg') ?>" alt="HSS Logo" class="navbar--logo" /></a>
-
+          <span class="d-block" style="margin-left: 1rem;">
+            <a href="http://tw.hss.com.tw/">中文(內銷)</a> | <a href="http://www.hss.com.tw/">English</a>
+          </span>
         </div>
         <ul class="navbar--nav">
           <li>
