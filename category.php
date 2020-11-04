@@ -58,9 +58,6 @@ get_header();
           }
           wp_reset_query(); ?>
         </div>
-        <div class="mt-20" style="display: flex; justify-content: center;">
-          <?php wp_pagenavi(array('query' => $my_query)); ?>
-        </div>
 
       </div><!-- col-md-9 -->
     </div>
