@@ -1,40 +1,44 @@
 <?php
+
 /**
  * The template for displaying all single posts
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package hss-taiwan
+ * @package hss
  */
 
 get_header();
+
 ?>
+<?php
+while (have_posts()) : the_post();
 
-	<main id="primary" class="site-main">
+?>
+  <section class="product">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 product--img">
+          <?php
+          if (has_post_thumbnail()) { // check if the post has a Post Thumbnail assigned to it.
+            the_post_thumbnail('full', array('class' => 'img-fluid d-block')); // show featured image
+          } else { ?>
+            <img src="https://via.placeholder.com/400x500" alt="" class="img-fluid d-block" />
+          <?php } ?>
+        </div>
+        <div class="col-md-6 product--description">
+          <h1 class="text-center product--heading"><?php the_title(); ?></h1>
+          <p class="product--model mb-30 text-center">(<?php echo $model_num; ?>)</p>
+          <p>
+            <?php the_content(); ?>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', get_post_type() );
-
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'hss-taiwan' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'hss-taiwan' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
-	</main><!-- #main -->
+<?php endwhile;
+wp_reset_query(); ?>
 
 <?php
-get_sidebar();
 get_footer();
