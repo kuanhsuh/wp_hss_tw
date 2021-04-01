@@ -10,6 +10,8 @@
 
 get_header();
 
+$spec_image = get_field('spec_image');
+
 ?>
 <?php
 while (have_posts()) : the_post();
@@ -36,6 +38,23 @@ while (have_posts()) : the_post();
       </div>
     </div>
   </section>
+
+  <?php if ($spec_image['url']) { ?>
+    <section class="specification pt-60 pb-60">
+      <div class="container">
+        <div class="row justify-content-center">
+          <h2 class="page-heading mb-30">Specification</h2>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <img src="<?php echo $spec_image['url'] ?>" alt="<?php echo $spec_image['alt'] ?>" class="img-fluid d-block" />
+          </div>
+        </div>
+        <!-- row -->
+      </div>
+      <!-- container -->
+    </section>
+  <?php } ?>
 
 <?php endwhile;
 wp_reset_query(); ?>
