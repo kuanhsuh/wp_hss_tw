@@ -145,6 +145,8 @@ function hss_taiwan_scripts() {
 
 	wp_enqueue_script( 'hss-taiwan-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
+  wp_enqueue_script('main-js', get_theme_file_uri('./scripts.js'), array('jquery'), microtime(), true);
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
